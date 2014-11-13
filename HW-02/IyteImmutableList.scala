@@ -11,7 +11,7 @@ class IyteImmutableList(consHead:Node) {	//we need head to know the start, and p
   
   def add(x:Int):IyteImmutableList={		//add method of the IyteImmutableList
     
-	var number = new Node(x)				//creates the new node with item comes to function
+  var number = new Node(x)				//creates the new node with item comes to function
   var nextHead=new Node(null)				//nextHead node which will be head of the IyteImmutableList that will be returned
 	
     if(head.item == null){					//looks if the head is null or not
@@ -22,16 +22,18 @@ class IyteImmutableList(consHead:Node) {	//we need head to know the start, and p
       nextHead=number
     }
 	
-	new IyteImmutableList(nextHead)			//returns the new IyteImmutableList with newHead
+  new IyteImmutableList(nextHead)			//returns the new IyteImmutableList with newHead
   }
   
   override def toString():String={			//toString method of the IyteImmutableList
-    var returned=""							//create and initialize the string which will be returned
+    
+    var returned=""						//create and initialize the string which will be returned
     var walker = head						//node that will search all of the elements by beginning from head
+    
     if(walker.item != null){
       while(walker != null){
         returned=returned.concat(walker.item.toString+", ")	//adds found item to the returned string
-        walker=walker.nextNode 								//goes to the next node of the element
+        walker=walker.nextNode 					//goes to the next node of the element
       }
     }
     else{
