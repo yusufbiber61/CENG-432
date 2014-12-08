@@ -21,10 +21,8 @@ object RandomStuff extends RandomStuffTrait {
       }
       catch{													//operation is not valid
       case e: Exception => println("Ouppss!! Operation "+op+" could not be implemented to the "+currentItem+" !!")	 
-      }
-      
-    }
-    
+      } 
+    }  
     transformedList
   }
   
