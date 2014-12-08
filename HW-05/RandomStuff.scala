@@ -19,9 +19,9 @@ object RandomStuff extends RandomStuffTrait {
         try{													//try to operate the elements of the list
           transformedList = transformedList :+ op(currentItem)
         }
-    	  catch{													//operation is not valid
-    	  case e: Exception => println("Ouppss!! Operation "+op+" could not be implemented to the "+currentItem+" !!")	 
-    	  }
+    	   catch{													//operation is not valid
+    	    case e: Exception => println("Ouppss!! Operation "+op+" could not be implemented to the "+currentItem+" !!")	 
+    	   }
       }
     transformedList
   }
@@ -30,8 +30,8 @@ object RandomStuff extends RandomStuffTrait {
     for (currentItem <- list) {
       try{      
         if(!op(currentItem)){
-    	  return false
-    	  }
+    	    return false
+    	   }
       }
       catch{
         case e: Exception => println("Ouppss!! Operation "+op+" could not be implemented to the "+currentItem+" !!")
